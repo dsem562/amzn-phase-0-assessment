@@ -1,5 +1,30 @@
 // 1. Write your functions here
 
+function line (customers) {
+  const currentCustomers = []
+    if (customers.length === 0) {
+        return console.log("The line is currently empty")
+    } else if (customers.length > 0) {
+        for (i = 0; i < customers.length; i++) {
+            currentCustomers.push(`${[i + 1]}. ${customers[i]} `);
+        }
+        return console.log(`The line is currently: ${currentCustomers.join('')}`)
+    }
+}
+
+function takeANumber (currentCustomers = katzDeli, newCustomerStr) {
+    currentCustomers.push(newCustomerStr);
+    return console.log(`Welcome, ${newCustomerStr}. You are number ${currentCustomers.indexOf(newCustomerStr) + 1} in line.`)
+  }
+
+  function nowServing (restaurant) {
+    if (restaurant.length === 0) {
+        return console.log("There is nobody waiting to be served!")
+    } else if (restaurant.length > 0) {
+        return console.log (`Currently serving ${restaurant.shift()}.`)
+    }
+  }
+
 
 // 2. Example Usage
 
